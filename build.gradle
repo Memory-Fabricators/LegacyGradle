@@ -15,6 +15,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
+apply plugin: 'maven-publish'
 apply plugin: "com.gradle.plugin-publish"
 apply plugin: 'license'
 
@@ -93,7 +94,7 @@ dependencies {
     shade 'net.minecraftforge.srg2source:Srg2Source:4.0-SNAPSHOT'
 
     // The old version used by S2S is gone, so we need to force the latest build of that minor release
-    shade('org.eclipse.jdt:org.eclipse.jdt.core:3.12.0.+') {
+    shade('org.eclipse.jdt:org.eclipse.jdt.core:3.12.3') {
         force = true
     }
 
